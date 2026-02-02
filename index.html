@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Mwombeki Company | Digital Agency</title>
+
+  <!-- SEO -->
+  <meta name="description" content="Mwombeki Company is an international digital agency offering web development, automation and digital consulting.">
+  <meta name="keywords" content="Digital Agency, Web Development, Automation, Tanzania">
+  <meta name="author" content="Mwombeki Company">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Favicon (badilisha link ukiweka yako) -->
+  <link rel="icon" href="favicon.png">
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:Segoe UI, sans-serif;
+    }
+    body{background:#f5f7fa;color:#333;}
+
+    /* NAVBAR */
+    header{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:15px 40px;
+      background:#0b132b;
+      color:white;
+      position:sticky;
+      top:0;
+      z-index:1000;
+    }
+    header a{
+      color:white;
+      margin-left:20px;
+      text-decoration:none;
+      font-weight:500;
+    }
+
+    /* HERO */
+    .hero{
+      height:90vh;
+      background:linear-gradient(120deg,#1c2541,#3a86ff);
+      color:white;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      align-items:center;
+      text-align:center;
+      padding:20px;
+    }
+    .hero h2{font-size:3rem;}
+    .hero p{margin:15px 0;font-size:1.2rem;}
+    .btn{
+      padding:12px 35px;
+      background:#ffd60a;
+      color:#000;
+      text-decoration:none;
+      border-radius:30px;
+      font-weight:bold;
+    }
+
+    /* SECTIONS */
+    section{padding:70px 40px;text-align:center;}
+    .dark{background:#0b132b;color:white;}
+
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+      gap:25px;
+      margin-top:30px;
+    }
+    .card{
+      background:white;
+      padding:30px;
+      border-radius:15px;
+      box-shadow:0 10px 20px rgba(0,0,0,.1);
+      transition:.3s;
+    }
+    .card:hover{transform:translateY(-10px);}
+    .dark .card{background:#1c2541;color:white;}
+
+    /* TESTIMONIALS */
+    blockquote{
+      max-width:500px;
+      margin:20px auto;
+      font-style:italic;
+    }
+
+    /* CONTACT */
+    form{
+      max-width:400px;
+      margin:auto;
+      display:flex;
+      flex-direction:column;
+    }
+    input,textarea{
+      margin:10px 0;
+      padding:12px;
+      border-radius:5px;
+      border:none;
+    }
+    button{
+      padding:12px;
+      background:#ffd60a;
+      border:none;
+      font-weight:bold;
+      cursor:pointer;
+    }
+
+    footer{
+      background:#000;
+      color:white;
+      padding:15px;
+      text-align:center;
+    }
+
+    /* ANIMATIONS */
+    .fade{
+      opacity:0;
+      animation:fadeUp 1s forwards;
+    }
+    .delay{animation-delay:.5s;}
+    @keyframes fadeUp{
+      from{opacity:0;transform:translateY(20px);}
+      to{opacity:1;transform:translateY(0);}
+    }
+
+    /* RESPONSIVE */
+    @media(max-width:768px){
+      header{flex-direction:column;}
+      .hero h2{font-size:2.2rem;}
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h2>Mwombeki</h2>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#services">Services</a>
+    <a href="#portfolio">Portfolio</a>
+    <a href="#testimonials">Testimonials</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <h2 class="fade">We Build Digital Solutions</h2>
+  <p class="fade delay">Web • Automation • Online Business</p>
+  <a href="#contact" class="btn fade delay">Start Project</a>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+  <h2>Our Services</h2>
+  <div class="grid">
+    <div class="card">Web Development</div>
+    <div class="card">Business Automation</div>
+    <div class="card">Digital Consulting</div>
+  </div>
+</section>
+
+<!-- PORTFOLIO -->
+<section id="portfolio" class="dark">
+  <h2>Portfolio</h2>
+  <div class="grid">
+    <div class="card">Company Website</div>
+    <div class="card">E-Commerce Platform</div>
+    <div class="card">Automation System</div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="testimonials">
+  <h2>What Clients Say</h2>
+  <blockquote>“Professional and reliable digital agency.”</blockquote>
+  <blockquote>“Our business grew online thanks to Mwombeki.”</blockquote>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="dark">
+  <h2>Contact Us</h2>
+  <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
+    <textarea name="message" placeholder="Your Message" required></textarea>
+    <button type="submit">Send Message</button>
+  </form>
+</section>
+
+<footer>
+  © 2026 Mwombeki Company | All Rights Reserved
+</footer>
+
+<script>
+  // smooth scroll
+  document.querySelectorAll('a[href^="#"]').forEach(link=>{
+    link.addEventListener('click',e=>{
+      e.preventDefault();
+      document.querySelector(link.getAttribute('href'))
+        .scrollIntoView({behavior:'smooth'});
+    });
+  });
+</script>
+
+</body>
+</html>
